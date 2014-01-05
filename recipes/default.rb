@@ -13,9 +13,9 @@ if platform?('ubuntu')
   end
 end
 if node['platform_family'] == 'rhel'
-  Chef::Config[:yum_timeout] = 1800
+  Chef::Config[:yum_timeout] = node[:elixir][:yum_install_timeout]
 end
 
-include_recipe "git"
+include_recipe "git::source"
 include_recipe "erlang::#{node[:elixir][:erlang_install_method]}"
 include_recipe "elixir::#{node[:elixir][:install_method]}"

@@ -24,3 +24,4 @@ default[:elixir][:package][:yum][:name] = "elixir-0.12.0-1.fc20.noarch.rpm"
 
 # do not change
 default[:elixir][:erlang_install_method] = "esl"
+default[:elixir][:yum_install_timeout] = 3600

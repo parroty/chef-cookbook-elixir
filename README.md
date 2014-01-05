@@ -55,7 +55,7 @@ It's configured to uses the following PPA. In order to use different package, co
 
 - https://launchpad.net/~bigkevmcd/+archive/elixir
 
-##### RHEL
+##### RHEL (CentOS)
 It's configured to download the rpm file listed in the following. In order to use different ones, check `node[:elixir][:package][:yum][***]` parameters.
 
 - http://rpm.pbone.net/
