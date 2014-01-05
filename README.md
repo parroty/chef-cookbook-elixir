@@ -17,7 +17,7 @@ Tested on:
 * Ubuntu 12.04, 13.04
 * CentOS 5.8, 6.4
 
-**Notes**: This cookbook has been tested on the listed platforms. It may work on other platforms with or without modification.
+**Notes**: This cookbook has been tested on the listed platforms, but not with the all combinations of parameters. It may work on other platforms with or without modification.
 
 ## Cookbooks
 
@@ -83,7 +83,7 @@ Some Vagrantfile definition exapmles.
 
 - Source installation of elixir (elixir/master)
 
-```
+```ruby
 config.vm.provision :chef_solo do |chef|
     chef.add_recipe "elixir::default"
     chef.json = {
@@ -95,7 +95,7 @@ config.vm.provision :chef_solo do |chef|
 
 - Package installation of elixir
 
-```
+```ruby
 config.vm.provision :chef_solo do |chef|
     chef.add_recipe "elixir::default"
     chef.json = {
