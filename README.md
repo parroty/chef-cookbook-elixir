@@ -24,6 +24,17 @@ Tested on:
 * git
 * erlang
 
+### Berksfile
+As an example, the following berksfile would work.
+
+```
+site :opscode
+
+cookbook 'git'
+cookbook 'erlang', git: 'https://github.com/opscode-cookbooks/erlang.git'
+cookbook 'elixir', git: 'git://github.com/parroty/chef-cookbook-elixir.git'
+```
+
 Attributes
 ==========
 By default, it downloads precompiled elixir files and install them in /usr/local path. It can be changed using the following attributes.
@@ -32,7 +43,8 @@ By default, it downloads precompiled elixir files and install them in /usr/local
 * `default['elixir']['install_method']` - installation method, which can be `source`, `precompiled` or `package`.
 * `default[:elixir][:source][:revision]` - revision tag for the source installation.
 * `default[:elixir][:precompiled][:revision]` - revision tag for the precompiled file installation.
-* `default[:elixir][:package][:revision]` - revision tag for the package installation
+* `default[:elixir][:package][:apt][:revision]` - revision tag for the Ubuntu package installation.
+* `default[:elixir][:package][:yum][:revision]` - revision tag for the RHEL package installation.
 
 ### Note
 #### Precompiled installation (install_method = precompiled)
@@ -60,6 +72,35 @@ It's configured to download the rpm file listed in the following. In order to us
 
 - http://rpm.pbone.net/
 
-##### Others
-- "esl" package is used for erlang installation by default, but it can be changed by changing `node[:elixir][:erlang_install_method]`
+It may not work on RHEL 5.x, due to the dependency related issue, use `source` or `precompiled` instead.
+
+#### Erlang installation
+- "esl" package is used for erlang installation by default, but it can be changed by changing `node[:elixir][:erlang_install_method]`.
     - If the OS is RHEL5.x, "source" installation is forced, as esl package is not avialble.
+
+### Vagrant
+Some Vagrantfile definition exapmles.
+
+- Source installation of elixir (elixir/master)
+
+```
+config.vm.provision :chef_solo do |chef|
+    chef.add_recipe "elixir::default"
+    chef.json = {
+      "elixir" => {
+        "install_method" => "source"
+      }
+    }
+```
+
+- Package installation of elixir
+
+```
+config.vm.provision :chef_solo do |chef|
+    chef.add_recipe "elixir::default"
+    chef.json = {
+      "elixir" => {
+        "install_method" => "package"
+      }
+    }
+```

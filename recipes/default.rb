@@ -22,6 +22,8 @@ end
 if node['platform_family'] == 'rhel' and node['platform_version'].to_i <= 5
   # As RHEL5 doesn't have ESL package, force source installation.
   erlang_install_method = "source"
+  node.default[:erlang][:source][:version] = node[:elixir][:erlang_source_version]
+  node.default[:erlang][:source][:url]     = node[:elixir][:erlang_source_url]
 else
   erlang_install_method = node[:elixir][:erlang_install_method]
 end
