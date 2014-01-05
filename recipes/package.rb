@@ -51,12 +51,12 @@ when 'rhel'
   rpm_file = "#{Chef::Config[:file_cache_path]}/#{node[:elixir][:package][:yum][:name]}"
 
   remote_file rpm_file do
-      source "#{node[:elixir][:package][:yum][:repo]}/#{node[:elixir][:package][:yum][:name]}"
-      action :create
+    source "#{node[:elixir][:package][:yum][:repo]}/#{node[:elixir][:package][:yum][:name]}"
+    action :create
   end
 
   rpm_package "elixir" do
-      source rpm_file
-      action :install
+    source rpm_file
+    action :install
   end
 end
