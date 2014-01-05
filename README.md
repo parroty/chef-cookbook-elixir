@@ -15,7 +15,7 @@ Tested on Chef 11.8.2.
 Tested on:
 
 * Ubuntu 12.04, 13.04
-* CentOS 6.4
+* CentOS 5.8, 6.4
 
 **Notes**: This cookbook has been tested on the listed platforms. It may work on other platforms with or without modification.
 
@@ -59,3 +59,7 @@ It's configured to uses the following PPA. In order to use different package, co
 It's configured to download the rpm file listed in the following. In order to use different ones, check `node[:elixir][:package][:yum][***]` parameters.
 
 - http://rpm.pbone.net/
+
+##### Others
+- "esl" package is used for erlang installation by default, but it can be changed by changing `node[:elixir][:erlang_install_method]`
+    - If the OS is RHEL5.x, "source" installation is forced, as esl package is not avialble.
