@@ -20,7 +20,6 @@ bash "install" do
     make
     make install PREFIX='#{node[:elixir][:install_path]}'
     EOH
-  action :nothing
-  subscribes :run, "git[elixir]", :immediately
+  action :run
   not_if 'which elixir'
 end
