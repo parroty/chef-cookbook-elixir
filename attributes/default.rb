@@ -22,6 +22,7 @@ default[:elixir][:package][:yum][:revision] = "0.12.0-1"
 default[:elixir][:package][:yum][:name] = "elixir-#{node[:elixir][:package][:yum][:revision]}.fc20.noarch.rpm"
 default[:elixir][:package][:yum][:repo] = "ftp://ftp.univie.ac.at/systems/linux/fedora/updates/20/x86_64"
 
+default[:elixir][:enable_erlang_install] = true
 default[:elixir][:erlang_install_method] = "esl"
 default[:elixir][:erlang_source_version] = "R16B03"
 default[:elixir][:erlang_source_url] = "http://erlang.org/download/otp_src_R16B03.tar.gz"

@@ -75,8 +75,10 @@ It's configured to download the rpm file listed in the following. In order to us
 It may not work on RHEL 5.x, due to the dependency related issue, use `source` or `precompiled` instead.
 
 #### Erlang installation
+- By default, this cookbook tries to install erlang for ensuring elixir's requirement is satisfied (as many of the default packages installs old erlang, yet). If it's not needed, specify `false` for `node[:elixir][:enable_erlang_install]` attribute.
 - "esl" package is used for erlang installation by default, but it can be changed by changing `node[:elixir][:erlang_install_method]`.
     - If the OS is RHEL5.x, "source" installation is forced, as esl package is not avialble.
+
 
 ### Vagrant
 Some Vagrantfile definition exapmles.
