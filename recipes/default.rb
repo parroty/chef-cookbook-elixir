@@ -1,6 +1,10 @@
 # Cookbook Name:: elixir
 # Recipe:: default
 
+log "start of elixir::default recipe" do
+  level :debug
+end
+
 # TODO: git::default didn't work in some OSs, and temporarily changed to git::source
 if node['platform_family'] == 'fedora'
   include_recipe "git::default"
@@ -38,3 +42,7 @@ if node[:elixir][:enable_erlang_install]
 end
 
 include_recipe "elixir::#{node[:elixir][:install_method]}"
+
+log "end of elixir::default recipe" do
+  level :debug
+end
