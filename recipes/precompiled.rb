@@ -7,7 +7,7 @@ install_path = node[:elixir][:install_path]
 revision     = node[:elixir][:precompiled][:revision]
 
 # paths
-archive_source       = "#{node[:elixir][:precompiled][:repo]}/#{revision}/#{revision}.zip"
+archive_source       = "#{node[:elixir][:precompiled][:repo]}/#{revision}/Precompiled.zip"
 archive_destination  = "#{Chef::Config[:file_cache_path]}/elixir_precompiled"
 archive_save_path    = "#{archive_destination}/precompiled.zip"
 archive_extract_path = "#{archive_destination}/extract"

@@ -8,7 +8,7 @@ default[:elixir][:source][:repo] = "https://github.com/elixir-lang/elixir.git"
 default[:elixir][:source][:revision] = "master"
 
 default[:elixir][:precompiled][:repo] = "https://github.com/elixir-lang/elixir/releases/download"
-default[:elixir][:precompiled][:revision] = "v0.12.3"
+default[:elixir][:precompiled][:revision] = "v0.12.4"
 
 default[:elixir][:package][:apt][:revision] = "0.12.0-0"
 default[:elixir][:package][:apt][:repo] = "http://ppa.launchpad.net/bigkevmcd/elixir/ubuntu"
