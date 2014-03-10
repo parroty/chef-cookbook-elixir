@@ -18,7 +18,7 @@ default[:elixir][:package][:apt][:distribution] = nil
 default[:elixir][:package][:apt][:key] = "72D340A3"
 default[:elixir][:package][:apt][:keyserver] = "keyserver.ubuntu.com"
 
-default[:elixir][:package][:yum][:revision] = "0.12.0-1"
+default[:elixir][:package][:yum][:revision] = "0.12.2-2"
 default[:elixir][:package][:yum][:name] = "elixir-#{node[:elixir][:package][:yum][:revision]}.fc20.noarch.rpm"
 default[:elixir][:package][:yum][:repo] = "ftp://ftp.univie.ac.at/systems/linux/fedora/updates/20/x86_64"
 
