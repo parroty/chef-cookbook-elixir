@@ -14,7 +14,7 @@ Tested on Chef 11.8.2.
 
 Tested on:
 
-* Ubuntu 12.04, 13.04
+* Ubuntu 12.04, 13.04, 13.10
 * CentOS 5.8, 6.4
 
 **Notes**: This cookbook has been tested on the listed platforms, but not with the all combinations of parameters. It may work on other platforms with or without modification.
@@ -64,6 +64,7 @@ It downloads "elixir/master" by default. For installing specific revisions, chec
 #### Package installation (install_method = package)
 ##### Ubuntu
 It's configured to uses the following PPA. In order to use different package, configure `node[:elixir][:package][:apt][***]` parameters.
+It's tested on 13.10 (Saucy), and it might not work on older versions.
 
 - https://launchpad.net/~bigkevmcd/+archive/elixir
 
