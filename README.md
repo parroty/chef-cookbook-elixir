@@ -32,7 +32,7 @@ site :opscode
 
 cookbook 'git'
 cookbook 'erlang', git: 'https://github.com/opscode-cookbooks/erlang.git'
-cookbook 'elixir', git: 'git://github.com/parroty/chef-cookbook-elixir.git'
+cookbook 'elixir', git: 'https://github.com/parroty/chef-cookbook-elixir.git'
 ```
 
 Attributes
