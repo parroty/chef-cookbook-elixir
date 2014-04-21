@@ -8,7 +8,7 @@ default[:elixir][:source][:repo] = "https://github.com/elixir-lang/elixir.git"
 default[:elixir][:source][:revision] = "master"
 
 default[:elixir][:precompiled][:repo] = "https://github.com/elixir-lang/elixir/releases/download"
-default[:elixir][:precompiled][:revision] = "v0.12.5"
+default[:elixir][:precompiled][:revision] = "v0.13.0"
 
 default[:elixir][:package][:apt][:revision] = "0.12.5-0"
 default[:elixir][:package][:apt][:repo] = "http://ppa.launchpad.net/bigkevmcd/elixir/ubuntu"
@@ -24,6 +24,6 @@ default[:elixir][:package][:yum][:repo] = "ftp://ftp.univie.ac.at/systems/linux/
 
 default[:elixir][:enable_erlang_install] = true
 default[:elixir][:erlang_install_method] = "esl"
-default[:elixir][:erlang_source_version] = "R16B03"
-default[:elixir][:erlang_source_url] = "http://erlang.org/download/otp_src_R16B03.tar.gz"
+default[:elixir][:erlang_source_version] = "17.0"
+default[:elixir][:erlang_source_url] = "http://www.erlang.org/download/otp_src_17.0.tar.gz"
 default[:elixir][:yum_install_timeout] = 3600
