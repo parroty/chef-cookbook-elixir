@@ -14,7 +14,7 @@ Tested on Chef 11.8.2.
 
 Tested on:
 
-* Ubuntu 12.04, 13.04, 13.10
+* Ubuntu 12.04, 13.04, 13.10, 14.04
 * CentOS 5.8, 6.4
 
 **Notes**: This cookbook has been tested on the listed platforms, but not with the all combinations of parameters. It may work on other platforms with or without modification.
