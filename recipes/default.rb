@@ -38,7 +38,7 @@ if node[:elixir][:enable_erlang_install]
     erlang_install_method = node[:elixir][:erlang_install_method]
   end
 
-  include_recipe "erlang::#{erlang_install_method}"
+  include_recipe "erlang::#{node[:elixir][:erlang_install_method]}"
 end
 
 include_recipe "elixir::#{node[:elixir][:install_method]}"
