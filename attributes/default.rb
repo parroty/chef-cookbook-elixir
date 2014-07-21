@@ -24,6 +24,6 @@ default[:elixir][:package][:yum][:repo] = "ftp://ftp.univie.ac.at/systems/linux/
 
 default[:elixir][:enable_erlang_install] = true
 default[:elixir][:erlang_install_method] = "esl"
-default[:elixir][:erlang_source_version] = "17.0"
-default[:elixir][:erlang_source_url] = "http://www.erlang.org/download/otp_src_17.0.tar.gz"
+default[:elixir][:erlang_source_version] = "17.1"
+default[:elixir][:erlang_source_url] = "http://www.erlang.org/download/otp_src_17.1.tar.gz"
 default[:elixir][:yum_install_timeout] = 3600
