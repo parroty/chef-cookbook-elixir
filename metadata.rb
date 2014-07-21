@@ -1,4 +1,4 @@
-name             "chef-cookbook-elixir"
+name             "elixir"
 maintainer       "parroty"
 maintainer_email "parroty00@gmail.com"
 license          "Apache"
