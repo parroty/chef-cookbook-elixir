@@ -8,8 +8,9 @@ default[:elixir][:source][:repo] = "https://github.com/elixir-lang/elixir.git"
 default[:elixir][:source][:revision] = "master"
 
 default[:elixir][:precompiled][:repo] = "https://github.com/elixir-lang/elixir/releases/download"
-default[:elixir][:precompiled][:revision] = "v0.14.2"
+default[:elixir][:precompiled][:revision] = "v0.15.0"
 
+# ---- The following ubuntu ppa package is deprecated and not available -----
 default[:elixir][:package][:apt][:revision] = "0.12.5-0"
 default[:elixir][:package][:apt][:repo] = "http://ppa.launchpad.net/bigkevmcd/elixir/ubuntu"
 default[:elixir][:package][:apt][:name] = "bigkevmcd"
@@ -18,6 +19,7 @@ default[:elixir][:package][:apt][:distribution] = nil
 default[:elixir][:package][:apt][:key] = "72D340A3"
 default[:elixir][:package][:apt][:keyserver] = "keyserver.ubuntu.com"
 
+# ---- The following rpm package is not the latest -----
 default[:elixir][:package][:yum][:revision] = "0.12.2-2"
 default[:elixir][:package][:yum][:name] = "elixir-#{node[:elixir][:package][:yum][:revision]}.fc20.noarch.rpm"
 default[:elixir][:package][:yum][:repo] = "ftp://ftp.univie.ac.at/systems/linux/fedora/updates/20/x86_64"

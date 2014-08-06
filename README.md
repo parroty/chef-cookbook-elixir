@@ -63,11 +63,12 @@ It downloads "elixir/master" by default. For installing specific revisions, chec
 
 #### Package installation (install_method = package)
 ##### Ubuntu
+<del>
 It's configured to uses the following PPA. In order to use different package, configure `node[:elixir][:package][:apt][***]` parameters.
 It's tested on 13.10 (Saucy), and it might not work on older versions.
 
 - https://launchpad.net/~bigkevmcd/+archive/elixir
-
+</del>
 ##### RHEL (CentOS)
 It's configured to download the rpm file listed in the following. In order to use different ones, check `node[:elixir][:package][:yum][***]` parameters.
 
