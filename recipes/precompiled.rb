@@ -13,7 +13,7 @@ archive_save_path    = "#{archive_destination}/precompiled.zip"
 archive_extract_path = "#{archive_destination}/extract"
 
 # target files
-target_libs = %w{eex elixir ex_unit iex mix}
+target_libs = %w{eex elixir ex_unit iex mix logger}
 target_bins = %w{elixir elixirc iex mix}
 
 #------- codes -------
